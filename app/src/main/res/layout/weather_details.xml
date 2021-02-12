@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_700"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/purple_700"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="@string/collapsing_toolbar">
+
+            <ImageView
+                android:id="@+id/toolbarImage"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_cloud_24"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:text="njhg"
+                android:textAlignment="center"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_cityname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_day"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:text="asdasdasdasd"
+                android:textAlignment="center"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_cityname"
+                android:layout_margin="5dp"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:orientation="vertical"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_5">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/weather"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Weather"
+                            android:textAllCaps="true"
+                            android:textColor="@color/purple_200"
+                            android:textSize="@dimen/textsize_14"
+                            android:textStyle="bold"
+
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_weather"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_14"
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_5">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_temperature"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_temp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/purple_200"
+                            android:textSize="@dimen/textsize_14"
+                            android:textStyle="bold"
+
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_temperature"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_14"
+
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_5">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_humidity"
+                            android:textAllCaps="true"
+                            android:textColor="@color/purple_200"
+                            android:textSize="@dimen/textsize_14"
+                            android:textStyle="bold"
+
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_humidity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_14"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_5">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_wind"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_wind"
+                            android:textAllCaps="true"
+                            android:textColor="@color/purple_200"
+                            android:textSize="@dimen/textsize_14"
+                            android:textStyle="bold"
+
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_wind"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_14"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_5">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lbl_clouds"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_clouds"
+                            android:textAllCaps="true"
+                            android:textColor="@color/purple_200"
+                            android:textSize="@dimen/textsize_14"
+                            android:textStyle="bold"
+
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_clouds"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_14"
+
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

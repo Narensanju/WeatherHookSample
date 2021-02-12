@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="size_15">15sp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="app_bar_height">240dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="textsize_14">14sp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="size_12">12sp</dimen>
+
+</resources>
